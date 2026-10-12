@@ -1,0 +1,9 @@
+from collections import Counter
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        # naive solution
+        freq = Counter(nums)
+        return sorted(freq.keys(), reverse=True, key=lambda x: freq[x])[:k]
+
+        
